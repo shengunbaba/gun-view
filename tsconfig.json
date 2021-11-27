@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "moduleResolution": "node",
+    "rootDir": ".",
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "outDir": "lib",
+    "sourceMap": true,
+    "noUnusedLocals": true,
+    "noEmitOnError": true,
+    "module": "commonjs",
+    "target": "ES6",
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2016"
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "luban-view": [
+        "src/component/index"
+      ]
+    }
+  },
+  "include": [
+    "src/component/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,45 @@
+@import "./component/common.less";
+
+ul, li, ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+p, body, input {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 14px;
+}
+
+ul.app {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    > li {
+        display: inline-block;
+        flex: 0 0 19.9%;
+        padding: 20px;
+        width: 19.9%;
+        box-sizing: border-box;
+        border: 1px dotted #ddd;
+        height: 300px;
+    }
+
+    li.tool-tip-demo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .demo {
+            flex: 0 0 30%;
+        }
+    }
+}
+
