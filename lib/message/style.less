@@ -1,0 +1,49 @@
+@import "../config.less";
+
+@cls: @{perfix}-message;
+
+@keyframes lubanMessageShow {
+    0% {
+        opacity: 0;
+        margin-top: 0;
+    }
+    8% {
+        opacity: 1;
+        margin-top: 10px;
+    }
+    95% {
+        opacity: 1;
+        margin-top: 10px
+    }
+    100% {
+        opacity: 0;
+        margin-top: 0;
+    }
+}
+
+.@{cls} {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    height: 0;
+    z-index: 2;
+}
+
+.@{cls}-item {
+    > div {
+        display: flex;
+        align-items: center;
+
+        > span {
+            padding: 0 8px;
+        }
+    }
+
+    margin: 5px 0;
+    animation: lubanMessageShow 2.6s forwards;
+    box-shadow: 1px 5px 7px rgba(0, 0, 0, 0.1);
+}

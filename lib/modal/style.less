@@ -1,0 +1,82 @@
+@import "../config.less";
+
+@cls: @{perfix}-modal;
+
+
+@keyframes lubanModal {
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.@{cls} {
+    position: fixed;
+}
+
+.@{cls}-nodrag {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.@{cls}-drag {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .@{cls}-title {
+        cursor: move;
+    }
+}
+
+
+.@{cls}-core {
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    animation: lubanModal 0.1s ease-out forwards;
+
+    > i {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 15px;
+        padding: 5px;
+        cursor: pointer;
+        transition: opacity .3s ease-out;
+
+        &:hover {
+            opacity: 0.7;
+            transition: opacity .3s ease-out;
+        }
+    }
+
+    > p {
+        text-align: center;
+        font-size: 18px;
+        padding: 8px 0;
+    }
+}
+
+.@{cls}-btns {
+    display: flex;
+    align-items: center;
+    padding: 26px 0 10px 0;
+    justify-content: center;
+
+    > span {
+        width: 104px;
+        margin: 0 10px;
+        text-align: center;
+        cursor: pointer;
+        height: 36px;
+        line-height: 36px;
+    }
+}

@@ -1,0 +1,43 @@
+@import "../config.less";
+
+@cls: @{perfix}-button;
+
+@keyframes buttonLoading {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(36000deg);
+    }
+}
+
+@keyframes buttonLoadingShow {
+    0% {
+        margin-left: -18px;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+.@{cls} {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+    outline: none;
+    border: none;
+
+    > i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: buttonLoading 130s linear infinite, buttonLoadingShow 0.6s ease-out forwards;
+        margin-right: 7px
+    }
+}
+
+.@{cls}-loading {
+    cursor: default;
+}

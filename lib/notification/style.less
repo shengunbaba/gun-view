@@ -1,0 +1,59 @@
+@import "../config.less";
+
+@cls: @{perfix}-notification;
+
+@keyframes notificationShow {
+    0% {
+        transform: translateX(120%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.@{cls} {
+    display: flex;
+    position: fixed;
+    top: 20px;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    height: 0;
+    z-index: 2;
+    align-items: flex-end;
+    padding-right: 30px;
+}
+
+.@{cls}-item {
+    width: 384px;
+    box-sizing: border-box;
+
+    animation: notificationShow .2s ease-out forwards;
+
+    > div {
+        width: 100%;
+        display: flex;
+    }
+
+    margin: 5px 0;
+    box-shadow: 1px 5px 7px rgba(0, 0, 0, 0.1);
+}
+
+.@{cls}-hide {
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.@{cls}-close {
+    cursor: pointer;
+}
+
+.@{cls}-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    > span {
+        word-break: break-word;
+    }
+}
