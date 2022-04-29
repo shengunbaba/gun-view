@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Icon} from 'luban-view';
+import {Icon} from 'gun-view';
 import './demo.less'
 
 const Demo = () => {

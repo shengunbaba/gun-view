@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {ExCoArrow} from 'luban-view'
+import {ExCoArrow} from 'gun-view'
 
 const Demo = () => {
     const [downward, setDownward] = React.useState(false)

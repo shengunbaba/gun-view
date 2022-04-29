@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Modal} from 'luban-view';
+import {Modal} from 'gun-view';
 import './demo.less'
 
 const Demo = () => {

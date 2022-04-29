@@ -22,13 +22,14 @@
     ],
     "baseUrl": "./",
     "paths": {
-      "luban-view": [
+      "gun-view": [
         "src/component/index"
       ]
     }
   },
   "include": [
-    "src/component/**/*"
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
   ],
   "exclude": [
     "node_modules"

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Clipboard} from 'luban-view';
+import {Clipboard} from 'gun-view';
 import './demo.less'
 
 const Demo = () => {

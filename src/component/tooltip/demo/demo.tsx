@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Tooltip} from 'luban-view';
+import {Tooltip} from 'gun-view';
 import './demo.less'
 
 const Demo = () => {

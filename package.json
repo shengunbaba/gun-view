@@ -1,15 +1,17 @@
 {
-  "name": "luban-view",
-  "version": "1.8.16",
-  "description": "react ui",
+  "name": "gun-view",
+  "version": "1.0.0",
+  "description": "react ui component",
   "main": "./lib/index.js",
   "scripts": {
+    "start": "webpack-dev-server",
     "build": "rimraf lib && gulp build",
-    "postbuild": "node postbuild.js",
-    "start": "webpack-dev-server"
+    "postbuild": "node postbuild.js"
   },
   "keywords": [
-    "utils react ui react-ui"
+    "react",
+    "ui",
+    "component"
   ],
   "author": "zhangli",
   "license": "ISC",
@@ -28,13 +30,13 @@
     "cross-env": "^5.1.4",
     "css-loader": "^2.1.1",
     "express": "^4.17.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-cli": "^2.2.0",
-    "gulp-less": "^4.0.1",
-    "gulp-typescript": "^5.0.1",
+    "gulp-less": "^5.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
     "gulp-uglify": "^3.0.2",
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.9.0",
@@ -47,7 +49,7 @@
     "run-sequence": "^2.2.1",
     "source-map-loader": "^0.2.4",
     "style-loader": "^0.23.1",
-    "typescript": "^3.1.6",
+    "typescript": "^4.6.4",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.8.2",

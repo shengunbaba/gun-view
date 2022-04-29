@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {VirtualTree} from 'luban-view';
+import {VirtualTree} from 'gun-view';
 import './demo.less'
 import {treeData} from './standardData.js'
 

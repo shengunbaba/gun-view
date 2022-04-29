@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Select} from 'luban-view';
+import {Select} from 'gun-view';
 import './demo.less'
 
 const Option = Select.Option

@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Carousel} from "luban-view";
+import {Carousel} from "gun-view";
 import './style.less'
 
 const Demo = () => {

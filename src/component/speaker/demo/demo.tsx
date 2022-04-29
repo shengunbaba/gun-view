@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Speaker} from "luban-view";
+import {Speaker} from "gun-view";
 
 const Demo = () => {
     return (

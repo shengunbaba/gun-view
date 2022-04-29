@@ -1,4 +1,4 @@
-import {Row, Col} from 'luban-view';
+import {Row, Col} from 'gun-view';
 import * as React from "react";
 import './style.less'
 

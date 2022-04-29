@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Message} from 'luban-view';
+import {Message} from 'gun-view';
 import './demo.less'
 
 

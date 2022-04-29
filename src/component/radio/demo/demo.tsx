@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Radio} from 'luban-view';
+import {Radio} from 'gun-view';
 import './demo.less'
 
 

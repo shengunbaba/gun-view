@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Checkbox} from 'luban-view';
+import {Checkbox} from 'gun-view';
 import './demo.less'
 
 

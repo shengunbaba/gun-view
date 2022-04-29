@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Notification} from 'luban-view';
+import {Notification} from 'gun-view';
 import './demo.less'
 
 const Demo = () => {

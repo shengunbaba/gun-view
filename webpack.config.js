@@ -1,21 +1,21 @@
-const webpack = require("webpack");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const path = require('path')
+const path = require('path');
 module.exports = {
 
     entry: {
-        main: "./src/index.tsx",
-        vendor: ["react", "react-dom", "react-router", "react-router-dom"]
+        main: './src/index.tsx',
+        vendor: ['react', 'react-dom', 'react-router', 'react-router-dom'],
     },
     output: {
-        path: __dirname + "./dist",
-        publicPath: "/"
+        path: __dirname + './dist',
+        publicPath: '/',
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         port: 9000,
-        hot: true
+        hot: true,
     },
     module: {
         rules: [
@@ -23,48 +23,48 @@ module.exports = {
                 test: /\.tsx?$/,
                 use: [
                     {
-                        loader: "awesome-typescript-loader"
-                    }
-                ]
+                        loader: 'awesome-typescript-loader',
+                    },
+                ],
             },
-            {enforce: "pre", test: /\.tsx?$/, loader: "source-map-loader"},
+            {enforce: 'pre', test: /\.tsx?$/, loader: 'source-map-loader'},
 
             {
                 test: /\.less$/,
                 use: [
                     {
-                        loader: "style-loader" //将css代码以<style>标签的形式插入页面
+                        loader: 'style-loader', //将css代码以<style>标签的形式插入页面
                     },
                     {
-                        loader: "css-loader" //检查css代码中的import语句找到依赖，并合并
+                        loader: 'css-loader', //检查css代码中的import语句找到依赖，并合并
                     },
                     {
-                        loader: "less-loader",
+                        loader: 'less-loader',
                         options: {
                             strictMath: true,
-                            noIeCompat: true
-                        }
-                    }
-                ]
-            }
-        ]
+                            noIeCompat: true,
+                        },
+                    },
+                ],
+            },
+        ],
     },
     resolve: {
-        extensions: [".ts", ".tsx", ".js", ".json"],
+        extensions: ['.ts', '.tsx'],
         alias: {
-            "luban-view": "../../index",
-            '@': '/'
-        }
+            'gun-view': '../../index',
+            '@': '/',
+        },
     },
     plugins: [
         new webpack.DefinePlugin({
-            "process.env.NODE_ENV": JSON.stringify("development")
+            'process.env.NODE_ENV': JSON.stringify('development'),
         }),
         new HtmlWebpackPlugin({
-            template: "src/index.html",
-            chunksSortMode: "dependency"
-        })
+            template: 'src/index.html',
+            chunksSortMode: 'dependency',
+        }),
     ],
     optimization: {},
-    mode: "development"
+    mode: 'development',
 };
