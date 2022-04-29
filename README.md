@@ -1,3 +1,5 @@
+&nbsp;
+
 [github](https://github.com/shengunbaba/gun-view)
 
 &nbsp;
@@ -14,7 +16,7 @@
 ## component列表
 
 - Select
-    - support search
+    - 支持搜索
 
 &nbsp;
 
@@ -23,12 +25,12 @@
 &nbsp;
 
 - VirtualTree
-    - Support virtual scrolling
+    - tree组件，支持虚拟滚动
 
 &nbsp;
 
 - Modal
-    - Support drag
+    - 支持拖动
 
 &nbsp;
 
@@ -36,7 +38,7 @@
 
 &nbsp;
 
-- ExCoArrow  (Shrink expanded arrow)
+- ExCoArrow （收展的箭头）
 
 &nbsp;
 
@@ -44,8 +46,7 @@
 
 &nbsp;
 
-- Button
-    - support loading
+- loading 的 Button
 
 &nbsp;
 
@@ -69,7 +70,7 @@
 &nbsp;
 
 - Speaker  ( speaker icon)
-    - Play flash
+    - 听筒动态图标
 
 &nbsp;
 
@@ -79,7 +80,7 @@
 
 &nbsp;
 
-- carousel ( Rotation banner)
+- carousel (走马灯，banner)
 
 
 
