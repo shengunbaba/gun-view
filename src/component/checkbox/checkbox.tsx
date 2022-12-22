@@ -18,19 +18,13 @@ const Checkbox: React.FC<Props> = ({children, ...props}) => {
 
     const {className, perfixCls, checked, onChange, id, halfcheck = false, disabled = false} = props;
 
-    const [inputCheck, setInputCheck] = React.useState<boolean>(!!checked)
-
-    React.useEffect(() => {
-        setInputCheck(!!checked)
-    }, [checked])
 
     const onCheck = (e) => {
         if (disabled) {
-            onChange && onChange(inputCheck, id, e)
+            onChange && onChange(checked, id, e)
             return
         }
-        setInputCheck(!inputCheck)
-        onChange && onChange(!inputCheck, id, e)
+        onChange && onChange(!checked, id, e)
     }
 
     const clsBox = cls(perfixCls, {
@@ -39,8 +33,8 @@ const Checkbox: React.FC<Props> = ({children, ...props}) => {
     })
 
     const clsInput = cls(`${perfixCls}-input`, {
-        [`${perfixCls}-checked`]: inputCheck,
-        [`${perfixCls}-unchecked`]: !inputCheck,
+        [`${perfixCls}-checked`]: checked,
+        [`${perfixCls}-unchecked`]: !checked,
         [`${perfixCls}-halfcheck`]: halfcheck,
     })
     return (

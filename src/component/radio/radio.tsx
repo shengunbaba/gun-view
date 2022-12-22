@@ -16,15 +16,8 @@ const Radio: React.FC<Props> = ({children, ...props}) => {
 
     const {className, perfixCls, checked, onChange, id} = props
 
-    const [inputCheck, setInputCheck] = React.useState<boolean>(!!checked)
-
-    React.useEffect(() => {
-        setInputCheck(!!checked)
-    }, [checked])
-
     const onCheck = (e) => {
-        setInputCheck(!inputCheck)
-        onChange && onChange(!inputCheck, id, e)
+        onChange && onChange(!checked, id, e)
     }
 
     const clsBox = cls(perfixCls, {
@@ -32,7 +25,7 @@ const Radio: React.FC<Props> = ({children, ...props}) => {
     })
 
     const clsInput = cls(`${perfixCls}-input`, {
-        [`${perfixCls}-checked`]: inputCheck
+        [`${perfixCls}-checked`]: checked
     })
 
     return (
