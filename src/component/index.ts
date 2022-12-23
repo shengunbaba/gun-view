@@ -2,8 +2,6 @@ export {default as Select} from './select';
 
 export {default as Checkbox} from './checkbox';
 
-export {default as VirtualTree} from './virtualTree';
-
 export {default as Modal} from './modal';
 
 export {default as Clipboard} from './clipboard';

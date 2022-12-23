@@ -5,20 +5,21 @@ import './demo.less'
 
 const Demo = () => {
 
-    const [check] = React.useState(true)
-    const onChange = (status, id, e) => {
-        console.log(status, id, e)
+    const [check, setCheck] = React.useState(true)
+    const onChange = (e) => {
+        console.log(e)
+        setCheck(!check)
     }
 
     return (
         <div>
-            <Checkbox onChange={onChange} checked={check} id='uuid'>Checkbox</Checkbox>
+            <Checkbox onChange={onChange} checked={check}>Checkbox</Checkbox>
             <br/>
-            <Checkbox halfcheck={true} onChange={onChange}>Checkbox</Checkbox>
+            <Checkbox halfcheck={true}>Checkbox</Checkbox>
             <br/>
-            <Checkbox disabled={true} checked={true} onChange={onChange}>disable</Checkbox>
+            <Checkbox disabled={true} checked={true}>disable</Checkbox>
             <br/>
-            <Checkbox disabled={true} checked={false} onChange={onChange}>disable</Checkbox>
+            <Checkbox disabled={true} checked={false}>disable</Checkbox>
         </div>
 
     )

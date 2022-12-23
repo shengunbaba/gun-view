@@ -4,7 +4,7 @@
   "description": "react ui component",
   "main": "./lib/index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "gun-pack dev",
     "build": "rimraf lib && gulp build",
     "postbuild": "node postbuild.js"
   },
@@ -16,20 +16,11 @@
   "author": "zhangli",
   "license": "ISC",
   "dependencies": {
-    "luban-class": "^1.0.1"
+    "typescript": "^4.9.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/preset-react": "^7.0.0",
-    "@types/node": "^11.10.4",
-    "@types/react": "^16.7.8",
-    "@types/react-dom": "^16.0.11",
-    "awesome-typescript-loader": "^5.2.1",
-    "classnames": "^2.2.6",
-    "clean-webpack-plugin": "^2.0.1",
-    "cross-env": "^5.1.4",
-    "css-loader": "^2.1.1",
-    "express": "^4.17.1",
+    "@types/react-router-dom": "^5.3.3",
+    "babel-loader": "^9.1.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-clean": "^0.4.0",
@@ -38,21 +29,12 @@
     "gulp-less": "^5.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
     "gulp-uglify": "^3.0.2",
-    "html-webpack-plugin": "^3.2.0",
-    "less": "^3.9.0",
-    "less-loader": "^5.0.0",
+    "gun-pack": "^1.0.14",
+    "luban-class": "^1.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.13.1",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "rimraf": "^3.0.2",
-    "run-sequence": "^2.2.1",
-    "source-map-loader": "^0.2.4",
-    "style-loader": "^0.23.1",
-    "typescript": "^4.6.4",
-    "webpack": "^4.26.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.8.2",
-    "webpack-merge": "^4.1.0"
+    "rimraf": "^3.0.2"
   }
 }

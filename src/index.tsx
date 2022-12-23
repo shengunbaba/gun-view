@@ -3,7 +3,6 @@ import {render} from 'react-dom';
 import './index.less'
 import Select from './component/select/demo/demo';
 import CheckBox from './component/checkbox/demo/demo';
-import VirtualTree from './component/virtualTree/demo/demo';
 import Modal from './component/modal/demo/demo'
 import Clipboard from './component/clipboard/demo/demo'
 import ExCoArrow from './component/exCoArrow/demo/demo'
@@ -21,7 +20,6 @@ render(
     <ul className='app'>
         <li><Select/></li>
         <li><CheckBox/></li>
-        <li><VirtualTree/></li>
         <li><Modal/></li>
         <li><Clipboard/></li>
         <li><ExCoArrow/></li>

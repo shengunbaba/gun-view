@@ -10,21 +10,20 @@ interface Props {
     checked?: boolean
     halfcheck?: boolean
     children?: React.ReactElement | any
-    id?: string
     disabled?: boolean
 }
 
 const Checkbox: React.FC<Props> = ({children, ...props}) => {
 
-    const {className, perfixCls, checked, onChange, id, halfcheck = false, disabled = false} = props;
+    const {className, perfixCls, checked, onChange, halfcheck = false, disabled = false} = props;
 
 
     const onCheck = (e) => {
         if (disabled) {
-            onChange && onChange(checked, id, e)
+            onChange && onChange(e)
             return
         }
-        onChange && onChange(!checked, id, e)
+        onChange && onChange(e)
     }
 
     const clsBox = cls(perfixCls, {
