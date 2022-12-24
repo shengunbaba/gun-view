@@ -9,15 +9,14 @@ interface Props {
     perfixCls?: string
     checked?: boolean
     children?: React.ReactElement | any
-    id?: string
 }
 
 const Radio: React.FC<Props> = ({children, ...props}) => {
 
-    const {className, perfixCls, checked, onChange, id} = props
+    const {className, perfixCls, checked, onChange} = props
 
     const onCheck = (e) => {
-        onChange && onChange(!checked, id, e)
+        onChange && onChange(e)
     }
 
     const clsBox = cls(perfixCls, {

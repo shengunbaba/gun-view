@@ -6,12 +6,12 @@ import './demo.less'
 const Demo = () => {
 
     const [check] = React.useState(false)
-    const onChange = (status, id, e) => {
-        console.log(status, id, e)
+    const onChange = (e) => {
+        console.log(e)
     }
 
     return (
-        <Radio checked={check} onChange={onChange} id='uuid'>Radio</Radio>
+        <Radio checked={check} onChange={onChange}>Radio</Radio>
 
     )
 }

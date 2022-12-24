@@ -3,7 +3,6 @@ import './style.less'
 import Icon from "./icon";
 import cls from 'luban-class'
 import {prefix} from "../config";
-import {ReactChildren} from "react";
 
 interface Props {
     className?: string

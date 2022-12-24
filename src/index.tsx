@@ -15,6 +15,7 @@ import Notification from "./component/notification/demo/demo";
 import Speaker from "./component/speaker/demo/demo";
 import Grid from "./component/grid/demo/demo";
 import Carousel from "./component/carousel/demo/demo";
+import Popover from './component/popover/demo/demo'
 
 render(
     <ul className='app'>
@@ -23,7 +24,7 @@ render(
         <li><Modal/></li>
         <li><Clipboard/></li>
         <li><ExCoArrow/></li>
-        <li className='tool-tip-demo'><Tooltip/></li>
+        <li className='flex-demo'><Tooltip/></li>
         <li><Button/></li>
         <li><Icon/></li>
         <li><Message/></li>
@@ -32,6 +33,7 @@ render(
         <li><Speaker/></li>
         <li><Grid/></li>
         <li><Carousel/></li>
+        <li  className='flex-demo'><Popover/></li>
     </ul>
     , document.getElementById('app')
 )
