@@ -13,6 +13,7 @@ interface Props {
     className?: string
     onClick?: Function
     clsPrefix?: string
+    children: React.ReactNode
 }
 
 const Col: React.FC<Props> = ({children, ...props}) => {

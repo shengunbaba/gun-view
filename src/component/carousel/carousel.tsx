@@ -8,7 +8,7 @@ interface Props {
     style?: Object
     effect?: 'scrollx'
     clsPrefix?: string
-    children: any
+    children: React.ReactNode[]
     mouseEnterStopRoll?: boolean
 }
 

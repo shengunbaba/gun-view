@@ -16,6 +16,7 @@ interface Props {
     perfixCls ? : string
     style ? : any
     showSearch ? : boolean
+    children: React.ReactNode
 }
 
 interface ExProps extends React.FC < Props > {

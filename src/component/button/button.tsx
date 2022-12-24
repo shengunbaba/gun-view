@@ -9,6 +9,7 @@ interface Props {
     loading?: boolean
     onClick?: Function
     perfixCls?: string
+    children: React.ReactNode
 }
 
 const Button: React.FC<Props> = ({children, ...props}) => {

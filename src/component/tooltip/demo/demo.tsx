@@ -11,7 +11,7 @@ const Demo = () => {
     }
     return (
         <>
-            <Tooltip content={content} placement='top' destory={true}>
+            <Tooltip content={content} placement='top' destroy={true}>
                 <div className='demo' onClick={onContentChange}>
                     <span>tooltip-top</span>
                 </div>

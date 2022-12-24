@@ -5,6 +5,7 @@ import {prefix} from "../config";
 import * as ReactDom from "react-dom";
 import cls from 'luban-class'
 import useDragAble from '../hooks/useDragAble.js'
+import type {ReactNode} from "react";
 
 interface Props {
     title?: string
@@ -16,6 +17,7 @@ interface Props {
     className?: string
     perfixCls?: string
     dragAble?: boolean
+    children?: ReactNode
 }
 
 const Modal: React.FC<Props> = ({...props}) => {

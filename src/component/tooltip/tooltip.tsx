@@ -5,11 +5,11 @@ import Portal from "./portal";
 
 interface Props {
     content: React.ReactElement | string
-    children?: any
+    children: React.ReactNode
     className?: string
     perfixCls?: string
     placement?: 'top' | 'bottom' | 'left' | 'right'
-    destory?: boolean
+    destroy?: boolean
 }
 
 const Tooltip: React.FC<Props> = ({children, ...props}) => {
@@ -17,7 +17,7 @@ const Tooltip: React.FC<Props> = ({children, ...props}) => {
     const [target, setTarget] = React.useState(null)
     const div: any = React.useRef(null);
 
-    const {destory = true} = props;
+    const {destroy = true} = props;
 
     const ele: any = React.Children.only(children);
 
@@ -30,7 +30,7 @@ const Tooltip: React.FC<Props> = ({children, ...props}) => {
 
 
     const onMouseLeave = (e) => {
-        if (!destory) {
+        if (!destroy) {
             return
         }
         if (div.current && div.current.parentNode) {
@@ -52,6 +52,6 @@ const Tooltip: React.FC<Props> = ({children, ...props}) => {
 Tooltip.defaultProps = {
     perfixCls: `${prefix}-tooltip`,
     placement: 'top',
-    destory: true
+    destroy: true
 }
 export default React.memo(Tooltip);

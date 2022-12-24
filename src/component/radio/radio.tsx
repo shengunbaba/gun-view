@@ -8,7 +8,7 @@ interface Props {
     onChange?: Function
     perfixCls?: string
     checked?: boolean
-    children?: React.ReactElement | any
+    children: React.ReactNode
 }
 
 const Radio: React.FC<Props> = ({children, ...props}) => {

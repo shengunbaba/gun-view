@@ -11,6 +11,7 @@ interface Props {
     className?: string
     id?: string
     clsPrefix?: string
+    children: React.ReactNode
 }
 
 const Row: React.FC<Props> = React.forwardRef(({children, gutter, align, justify, className, id, clsPrefix}, ref: any) => {

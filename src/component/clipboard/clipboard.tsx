@@ -3,6 +3,7 @@ import * as React from 'react'
 interface Props {
     copy: string;  //  需要复制的文本
     onChange?: Function   // 复制后的回调
+    children: React.ReactNode
 }
 
 const Clipboard: React.FC<Props> = ({children, ...props}) => {

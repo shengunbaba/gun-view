@@ -6,7 +6,7 @@ interface Props {
     value: string
     className?: string
     prefixCls?: string
-    children?: string
+    children: React.ReactNode
 }
 
 const Option: React.FC<Props> = ({children, ...props}) => {

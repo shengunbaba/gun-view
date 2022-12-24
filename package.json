@@ -16,9 +16,11 @@
   "author": "zhangli",
   "license": "ISC",
   "dependencies": {
-    "typescript": "^4.9.4"
   },
   "devDependencies": {
+    "@types/react-router": "^4.2.0",
+    "@types/react": "^16.8.6",
+    "typescript": "^4.9.4",
     "@types/react-router-dom": "^5.3.3",
     "babel-loader": "^9.1.0",
     "gulp": "^4.0.2",
