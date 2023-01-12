@@ -5,9 +5,10 @@ import './demo.less'
 
 const Demo = () => {
 
-    const [check] = React.useState(false)
+    const [check, setCheck] = React.useState(false)
     const onChange = (e) => {
         console.log(e)
+        setCheck(!check)
     }
 
     return (

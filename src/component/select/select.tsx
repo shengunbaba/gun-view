@@ -1,36 +1,36 @@
 import * as React from 'react';
-import { CTX } from './utils';
+import {CTX} from './utils';
 import Option from './option';
 import './style.less'
-import { prefix } from '../config'
+import {prefix} from '../config'
 import cls from 'luban-class'
-import { ReactElement } from "react";
+import {ReactElement} from "react";
 import * as icons from './arrow'
 
-const { ArrowIcon, SearchIcon } = icons
+const {ArrowIcon, SearchIcon} = icons
 
 interface Props {
-    className ? : string
+    className?: string
     value: string
-    onChange ? : Function
-    perfixCls ? : string
-    style ? : any
-    showSearch ? : boolean
+    onChange?: Function
+    perfixCls?: string
+    style?: any
+    showSearch?: boolean
     children: React.ReactNode
 }
 
-interface ExProps extends React.FC < Props > {
+interface ExProps extends React.FC <Props> {
     Option: typeof Option
 }
 
-const Select: ExProps = ({ children, ...props }) => {
+const Select: ExProps = ({children, ...props}) => {
 
-    const { value, onChange, className, perfixCls, style, showSearch } = props
+    const {value, onChange, className, perfixCls, style, showSearch} = props
 
-    const [active, setActive] = React.useState < string > (value)
-    const [show, setShow] = React.useState < boolean > (false)
-    const [viewData, setViewData] = React.useState < string > ('')
-    const [searchValue, setSearchValue] = React.useState < string > ('')
+    const [active, setActive] = React.useState <string>(value)
+    const [show, setShow] = React.useState <boolean>(false)
+    const [viewData, setViewData] = React.useState <string>('')
+    const [searchValue, setSearchValue] = React.useState <string>('')
 
     React.useEffect(() => {
         React.Children.forEach(children, (child: React.ReactElement) => {
@@ -42,7 +42,6 @@ const Select: ExProps = ({ children, ...props }) => {
 
 
     const _onChange = (val, e) => {
-        console.log(val)
         React.Children.forEach(children, (child: React.ReactElement) => {
             if (child.props.value == val) {
                 setViewData(child.props.children)
@@ -71,7 +70,7 @@ const Select: ExProps = ({ children, ...props }) => {
         setSearchValue(value)
     }
 
-    const renderChildren = (function() {
+    const renderChildren = (function () {
         if (showSearch) {
             const result: React.ReactElement[] = [];
             React.Children.map(children, (child: ReactElement) => {

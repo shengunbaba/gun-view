@@ -28,7 +28,6 @@ const Demo = () => {
             {
                 show &&
                 <Modal
-                    dragAble={true}
                     title='title'
                     onRight={onRight}
                     right='Comfirm'

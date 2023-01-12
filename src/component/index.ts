@@ -29,3 +29,5 @@ export {default as Col} from './grid/col';
 export {default as Carousel} from './carousel'
 
 export {default as Popover} from './popover'
+
+export {default as VirtualScroll} from './virtualScroll'

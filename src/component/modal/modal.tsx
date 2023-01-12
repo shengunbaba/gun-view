@@ -4,7 +4,6 @@ import Icon from './icon'
 import {prefix} from "../config";
 import * as ReactDom from "react-dom";
 import cls from 'luban-class'
-import useDragAble from '../hooks/useDragAble.js'
 import type {ReactNode} from "react";
 
 interface Props {
@@ -16,12 +15,11 @@ interface Props {
     right?: string
     className?: string
     perfixCls?: string
-    dragAble?: boolean
     children?: ReactNode
 }
 
 const Modal: React.FC<Props> = ({...props}) => {
-    const {children, title, onRight, onCancel, onLeft, right, left, className, perfixCls, dragAble} = props;
+    const {children, title, onRight, onCancel, onLeft, right, left, className, perfixCls} = props;
     const div = React.useRef<any>(document.createElement('div'));
 
     React.useEffect(() => {
@@ -31,7 +29,6 @@ const Modal: React.FC<Props> = ({...props}) => {
         }
     }, [])
 
-    const {targetRef, handleRef} = useDragAble(dragAble);
 
     const onLeftClick = (e) => {
         onLeft && onLeft(e)
@@ -47,17 +44,15 @@ const Modal: React.FC<Props> = ({...props}) => {
 
     const classNames = cls(perfixCls, {
         [`${className}`]: className,
-        [`${perfixCls}-nodrag`]: !dragAble,
-        [`${perfixCls}-drag`]: dragAble,
     })
 
     return ReactDom.createPortal(
-        <div className={classNames} ref={targetRef}>
+        <div className={classNames}>
             <div className={`${perfixCls}-core`}>
                 {onCancel && <i onClick={onCancelClick}>{Icon}</i>}
                 {
                     title &&
-                    <p className={`${perfixCls}-title`} ref={handleRef}>{title}</p>
+                    <p className={`${perfixCls}-title`}>{title}</p>
                 }
                 <div className={`${perfixCls}-content`}>
                     {children}

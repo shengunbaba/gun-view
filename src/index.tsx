@@ -16,6 +16,7 @@ import Speaker from "./component/speaker/demo/demo";
 import Grid from "./component/grid/demo/demo";
 import Carousel from "./component/carousel/demo/demo";
 import Popover from './component/popover/demo/demo'
+import VirtualScroll from "./component/virtualScroll/demo/demo";
 
 render(
     <ul className='app'>
@@ -33,7 +34,8 @@ render(
         <li><Speaker/></li>
         <li><Grid/></li>
         <li><Carousel/></li>
-        <li  className='flex-demo'><Popover/></li>
+        <li className='flex-demo'><Popover/></li>
+        <li><VirtualScroll/></li>
     </ul>
     , document.getElementById('app')
 )

@@ -3,20 +3,8 @@
 @cls: @{perfix}-modal;
 
 
-@keyframes lubanModal {
-    0% {
-        transform: scale(0.8);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
 .@{cls} {
     position: fixed;
-}
-
-.@{cls}-nodrag {
     top: 0;
     left: 0;
     bottom: 0;
@@ -26,22 +14,10 @@
     justify-content: center;
 }
 
-.@{cls}-drag {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    .@{cls}-title {
-        cursor: move;
-    }
-}
-
-
 .@{cls}-core {
     border-radius: 10px;
     padding: 20px;
     position: relative;
-    animation: lubanModal 0.1s ease-out forwards;
 
     > i {
         position: absolute;
