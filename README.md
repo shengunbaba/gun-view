@@ -81,9 +81,11 @@
 
 &nbsp;
 
-- carousel (走马灯，banner)
+- Carousel (走马灯，banner)
 
+&nbsp;
 
+- VirtualScroll  (虚拟滚动的列表)
 
 
 
