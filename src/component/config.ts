@@ -1,1 +1,1 @@
-export const prefix = 'lb'
+export const prefix = 'wu'
