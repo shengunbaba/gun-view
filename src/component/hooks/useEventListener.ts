@@ -8,7 +8,7 @@ const useEventListener = (event: string, target, cb): void => {
         target.addEventListener(event, lis)
 
         return () => {
-            target.removeEventListener(event, lis)
+            target?.removeEventListener(event, lis)
         }
     }, [])
 }
