@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        #div {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+
+<div id="div" contenteditable="true">
+
+</div>
+<input type="text" id="input">
+<script>
+    // const aa = {};
+    // try {
+    //     for (const item of aa) {
+    //
+    //     }
+    // } catch (e) {
+    //     console.log(e);
+    //     // throw e;
+    // }
+    //
+    // console.log(11);
+
+    document.getElementById('div').addEventListener('keydown', (e) => {
+        console.log(e);
+    });
+
+    document.getElementById('input').addEventListener('keydown', (e) => {
+        console.log(e);
+    });
+
+</script>
+</body>
+</html>

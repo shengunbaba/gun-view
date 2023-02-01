@@ -2,14 +2,14 @@ import React, {useState} from 'react';
 import {prefix} from "../config";
 import cls from 'luban-class'
 import ReactDom from 'react-dom'
-import useOutsideClick from '../hooks/useOutsideClick'
+import useClickAway from '../hooks/useClickAway'
 import './style.less'
 
 const Popover = ({children, className = '', perfixCls, placement = 'topLeft', content}) => {
 
     const [style, setStyle] = useState<null | object>(null)
 
-    const ref = useOutsideClick(() => {
+    const ref = useClickAway(() => {
         setStyle(null)
     })
 
