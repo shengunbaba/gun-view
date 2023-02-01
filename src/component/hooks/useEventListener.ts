@@ -1,6 +1,5 @@
 import {useEffect} from "react";
 
-
 const useEventListener = (event: string, target, cb): void => {
     useEffect(() => {
         const lis = (e) => {
