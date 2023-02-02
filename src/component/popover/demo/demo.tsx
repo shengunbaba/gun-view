@@ -8,7 +8,7 @@ const Demo = () => {
             placement='top'
             content={
                 <ul>
-                    <li>111111</li>
+                    <li onClick={() => console.log(11111)}>111111</li>
                     <li>222222</li>
                 </ul>}>
             <div className='popover-demo'>Popover top</div>
