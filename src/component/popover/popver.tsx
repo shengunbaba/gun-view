@@ -1,16 +1,33 @@
-import React, {useState} from 'react';
+import React, {ReactNode, useState} from 'react';
 import {prefix} from "../config";
 import cls from 'luban-class'
 import ReactDom from 'react-dom'
 import useClickAway from '../hooks/useClickAway'
 import './style.less'
 
-const Popover = ({children, className = '', perfixCls, placement = 'topLeft', content}) => {
+interface Props {
+    className?: string
+    perfixCls?: string
+    placement?: 'topLeft' | 'top' | 'topRight'
+    content: ReactNode
+    open?: boolean
+}
+
+const Popover: React.FC<Props> = ({
+                                      children,
+                                      className = '',
+                                      perfixCls,
+                                      placement = 'topLeft',
+                                      content,
+                                      open
+                                  }) => {
 
     const [style, setStyle] = useState<null | object>(null)
 
     const ref = useClickAway(() => {
-        setStyle(null)
+
+        // open 传值, 只通过open属性来控制隐藏
+        open === undefined && setStyle(null)
     })
 
     const classNames = cls(perfixCls, {
@@ -20,7 +37,8 @@ const Popover = ({children, className = '', perfixCls, placement = 'topLeft', co
         [`${perfixCls}-topright`]: placement === 'topRight',
     })
 
-    const ele = React.Children.only(children);
+    const ele: any = React.Children.only(children) as ReactNode;
+
     const getStyle = (target) => {
         const rect = target.getBoundingClientRect();
         const w = rect.width;
@@ -55,7 +73,9 @@ const Popover = ({children, className = '', perfixCls, placement = 'topLeft', co
         <>
             {React.cloneElement(ele, {onClick, ref})}
             {
-                style && ReactDom.createPortal(<div style={style} className={classNames}>{content}</div>, document.body)
+                (open === undefined || open) && style &&
+                ReactDom.createPortal(<div style={style}
+                                           className={classNames}>{content}</div>, document.body)
             }
         </>
     )

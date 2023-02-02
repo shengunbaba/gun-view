@@ -1,14 +1,17 @@
 import {Popover} from 'gun-view';
-import React from 'react';
+import React, {useState} from 'react';
 import './style.less'
 
 const Demo = () => {
+
+    const [open, setOpen] = useState(true)
     return <>
         <Popover
+            open={open}
             placement='top'
             content={
                 <ul>
-                    <li onClick={() => console.log(11111)}>111111</li>
+                    <li onClick={() => setOpen(true)}>111111</li>
                     <li>222222</li>
                 </ul>}>
             <div className='popover-demo'>Popover top</div>
